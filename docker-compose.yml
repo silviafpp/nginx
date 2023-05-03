@@ -11,5 +11,12 @@ services:
         - ./nginx:/etc/nginx
         - ./cert:/cert
 
+    http:
+      image: nginx:latest
+      ports:
+        - "8080:80"
+      volumes:
+        - ./html1:/usr/share/nginx/html
+
 
       
